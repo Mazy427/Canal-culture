@@ -101,7 +101,7 @@ nav ul li a.active {
 /* 英雄区域 */
 .hero {
     background: url('imgs/运河.png') center center/cover no-repeat;
-    min-height: 600px;
+    min-height: 750px;
     display: flex;
     align-items: center;
 }
@@ -383,6 +383,117 @@ footer {
     transform: translateY(-3px);
 }
 
+/* 新增：成果展示模块样式 */
+.achievements {
+    padding: 20px 0 60px;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.achievement-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 25px;
+    transition: transform 0.3s ease;
+    border: 1px solid var(--canal-light);
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #eff6ff;
+    color: var(--canal-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.card-title {
+    font-size: 18px;
+    color: var(--canal-dark);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.card-content {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.card-content ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.card-content li {
+    margin-bottom: 8px;
+}
+
+.data-visualization {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 30px;
+    margin-top: 20px;
+    border: 1px solid var(--canal-light);
+}
+
+.visualization-title {
+    font-size: 20px;
+    color: var(--canal-dark);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.chart-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.chart-box {
+    height: 300px;
+    border: 1px solid var(--canal-light);
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.chart-box p {
+    color: #64748b;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.report-download {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.report-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+}
+
 /* 响应式设计 */
 @media (max-width: 768px) {
     .header-content {
@@ -428,5 +539,14 @@ footer {
 
     .team {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* 成果展示响应式 */
+    .achievements-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .chart-container {
+        grid-template-columns: 1fr;
     }
 }
